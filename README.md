@@ -14,7 +14,7 @@
   A great app to track and store your workouts!
 
   # Usage
-  Point your Browser to the Deployed Application at:https://vxfit.herokuapp.com/
+  Point your Browser to the Deployed Application at: https://vxfit.herokuapp.com/
   ![image](https://user-images.githubusercontent.com/79023746/128586286-9eb50272-f21b-45ee-9c68-031b5388a363.png)
   ![image](https://user-images.githubusercontent.com/79023746/128586308-2139cfe4-8439-46ec-a682-319488198bc5.png)
   
