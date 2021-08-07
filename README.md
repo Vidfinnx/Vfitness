@@ -3,10 +3,8 @@
   ----
   # Table of Contents
   - [Description](#description)
-  - [Installation](#installation)
   - [Usage](#usage)
   - [Contribution](#contribution)
-  - [Test Instructions](#test-instructions)
   - [Contact Information For Questions](#questions)
   # Description
    Fitness Tracker System  `MongoDB` , `Express` ,  `Node.js` , `Mongoose`,  `Morgan`
