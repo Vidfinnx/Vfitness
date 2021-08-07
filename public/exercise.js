@@ -113,10 +113,14 @@ async function handleFormSubmit(event) {
     workoutData.reps = Number(repsInput.value.trim());
     workoutData.duration = Number(resistanceDurationInput.value.trim());
   }
-
+  //HAD TO ADD IF STATEMENT TO PREVENT BLANK EXERCISE FROM BEING INSERTED UPON COMPLETED WORKOUT
+  if(workoutData.duration !== 0){
   await API.addExercise(workoutData);
   clearInputs();
   toast.classList.add("success");
+  } else {
+  clearInputs();
+  toast.classList.add("success");}
 }
 
 function handleToastAnimationEnd() {
