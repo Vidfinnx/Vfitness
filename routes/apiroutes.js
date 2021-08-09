@@ -64,10 +64,10 @@ router.get("/api/workouts", (req, res) => {
  // get workout history
  router.get("/api/workouts/range", (req, res) => {
 
-     db.Workout.find({}).then(dbWorkout => {
+     db.Workout.find({},).sort({ day: 1 }).skip(3).limit(7).then(dbWorkout => {
          console.log("+++++++++++++++++++");
         console.log("ALL WORKOUTS DURATION CHART ROUTE");
-        //  console.log(dbWorkout);
+         console.log(dbWorkout);
          console.log("+++++++++++++++++++");
          dbWorkout.forEach(workout => {
              var total = 0;
