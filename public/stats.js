@@ -1,6 +1,5 @@
 function calculateTotalWeight(data) {
-  //HAD TO ADD BLANK STRING TO BEGINNING TO SHIFT DATES ON CHART TO MATCH UP CORRECTLY
-  const totals = [""];
+  const totals = [];
 
   data.forEach((workout) => {
     const workoutTotal = workout.exercises.reduce((total, { type, weight }) => {
