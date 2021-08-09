@@ -40,8 +40,8 @@ function formatDate(date) {
     month: "long",
     day: "numeric"
   };
-
-  return new Date(date).toLocaleDateString(options);
+  
+  return  new Date(date).toLocaleDateString(options);
 }
 
 function renderWorkoutSummary(summary) {

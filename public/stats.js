@@ -1,5 +1,6 @@
 function calculateTotalWeight(data) {
-  const totals = [];
+  //HAD TO ADD BLANK STRING TO BEGINNING TO SHIFT DATES ON CHART TO MATCH UP CORRECTLY
+  const totals = [""];
 
   data.forEach((workout) => {
     const workoutTotal = workout.exercises.reduce((total, { type, weight }) => {
@@ -8,7 +9,7 @@ function calculateTotalWeight(data) {
       }
       return total;
     }, 0);
-
+    
     totals.push(workoutTotal);
   });
 
@@ -18,12 +19,14 @@ function calculateTotalWeight(data) {
 function populateChart(data) {
   const durations = data.map(({ totalDuration }) => totalDuration);
   const pounds = calculateTotalWeight(data);
+  console.log(pounds);
 
   const line = document.querySelector('#canvas').getContext('2d');
   const bar = document.querySelector('#canvas2').getContext('2d');
 
-  const labels = data.map(({ day },) => {
+  const labels = data.map(({ day }) => {
     const date = new Date(day);
+    
 
     // Use JavaScript's `Intl` object to help format dates
     return new Intl.DateTimeFormat('en-US', {
